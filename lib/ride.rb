@@ -17,9 +17,9 @@ class Ride
 
   def board_rider(rider)
     if !rider.tall_enough?(@min_height)
-      return "#{rider.name} is not tall enough!"
-    elsif rider.spending_money.to_f < @admission_fee
-      return "#{rider.name} cannot afford it!"
+      false
+    elsif rider.spending_money.to_i < @admission_fee
+      true
     elsif !rider.preferences.include?(@excitement)
       true
 

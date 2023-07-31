@@ -19,6 +19,8 @@ class Carnival
     revenue = 0
 
     @rides.each do |ride|
+
+      # require 'pry'; binding.pry
       if ride.total_revenue > revenue
         revenue = ride.total_revenue
         most_profitable = ride

@@ -18,4 +18,8 @@ class Visitor
   def tall_enough?(requirement)
     @height >= requirement
   end
+
+  def spend(money)
+    @spending_money -= money
+  end
 end
